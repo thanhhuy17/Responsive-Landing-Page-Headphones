@@ -14,7 +14,7 @@
     --white-color: #FFF;
     --body-color: hsl(var(--hue), 4%, 6%);
     --container-color: hsl(var(--hue), 4%, 10%);
-    --text-gradient: linear-gradient(hsl(var(--hue), 4%, 24%));
+    --text-gradient: linear-gradient(hsl(var(--hue), 4%, 24%), hsl(var(--hue), 4%, 8%));
     --scroll-thumb-color: hsl(var(--hue), 4%, 16%);
     --scroll-thumb-color-alt: hsl(var(--hue), 4%, 20%);
     /* ====== Font and typography ====== */
@@ -137,9 +137,84 @@ img{
     display: grid;
 }
 /* =========== HEADER =========== */
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: transparent;
+}
+
 /* =========== NAV =========== */
-/* =========== GOOGLE FONTS =========== */
-/* =========== GOOGLE FONTS =========== */
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo{
+    display: flex;
+    width: 1.5rem;
+}
+
+.nav__toggle{
+    font-size: 1.2rem;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+/* Screen <= 767px */
+@media screen and (max-width: 767px) {
+    .nav__menu{
+        position: fixed;
+        background-color: var(--body-color);
+        /* top: 0; */
+        top: -100%;
+        left: 0;
+        width: 100%;
+        padding: 4rem 0 3rem;
+        transition: .4s;
+    }
+}
+
+.show__menu{
+    top: 0;
+}
+.nav__list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+}
+
+.nav__link{
+    color: var(--white-color);
+    font-size: var(--h2-font-size);
+    text-transform: uppercase;
+    font-weight: var(--font-semi-bold);
+    background: var(--text-gradient);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}.nav__link:hover{
+    background: var(--white-color);
+    color: transparent .4s;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.nav__close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--white-color);
+    cursor: pointer;
+}
+/* =========== Show Menu=========== */
+/* =========== Change Background Header=========== */
 /* =========== GOOGLE FONTS =========== */
 /* =========== GOOGLE FONTS =========== */
 
