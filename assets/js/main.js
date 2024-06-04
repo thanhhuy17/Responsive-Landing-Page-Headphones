@@ -1,4 +1,4 @@
-// =========== Show List Toggle==============
+// =========== Show and Hidden List Toggle==============
 const navMenu = document.getElementById('nav-menu')
 const navToggle = document.getElementById('nav-toggle')
 const navClose = document.getElementById('nav-close')
@@ -14,3 +14,13 @@ if(navClose){
         navMenu.classList.remove('show__menu')
     })
 }
+
+// ===== when you click "list nav(home...) off nav__menu" =====
+const navLink = document.querySelectorAll('.nav__link')
+
+function linkAction(){
+    const navMenu =document.getElementById('nav-menu')
+
+    navMenu.classList.remove('show__menu')
+}
+navLink.forEach(n=> n.addEventListener('click', linkAction))
