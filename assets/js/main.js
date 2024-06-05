@@ -24,3 +24,12 @@ function linkAction(){
     navMenu.classList.remove('show__menu')
 }
 navLink.forEach(n=> n.addEventListener('click', linkAction))
+
+// ============ CHANGE BACKGROUND HEADER ==============
+function scrollHeader(){
+    const header = document.getElementById('header')
+
+    if(this.scrollY >= 100) header.classList.add('scroll__header');
+    else header.classList.remove('scroll__header')
+}
+window.addEventListener('scroll', scrollHeader)

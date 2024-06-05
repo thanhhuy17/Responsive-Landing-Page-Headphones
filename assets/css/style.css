@@ -114,12 +114,10 @@ img{
 }
 
 .section__title-gradient{
-    background-color: var(--text-gradient);
+    background: var(--text-gradient);
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-
-
 }
 
 /* =========== LAYOUT =========== */
@@ -216,7 +214,9 @@ img{
     top: 0;
 }
 /* =========== Change Background Header=========== */
-
+.scroll__header{
+    background-color: var(--body-color);
+}
 /* =========== HOME =========== */
 .home__img{
     width: 250px;
@@ -266,6 +266,42 @@ img{
 }
 
 /* =========== BUTTON =========== */
+.button{
+    display: inline-block; /*Cac thanh phan buuton nam tren 1 dong*/
+    background-color: var(--black-color);
+    color: var(--white-color);
+    padding: 1rem 1.25rem;
+    border-radius: 0.5rem;
+    transition: .3s;
+}
+
+
+.button:hover{
+    background-color: var(--black-color-alt);
+}
+
+.button__icon{
+    font-size: 1.2rem;
+}
+
+.button--flex{
+    display: inline-flex;
+    align-items: center;
+    column-gap: .75rem;
+}
+
+
 /* =========== SPONSOR =========== */
+.sponsor__img{
+    width: 90px;
+}
+
+.sponsor__container{
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    row-gap: 5rem;
+    justify-items: center;
+    align-items: center;
+
+}
 /* =========== SPECS =========== */
 
