@@ -33,3 +33,58 @@ function scrollHeader(){
     else header.classList.remove('scroll__header')
 }
 window.addEventListener('scroll', scrollHeader)
+
+
+//Show and Hide Scroll Back Home
+function scrollBackHome(){
+    const scrollHome = document.getElementById('scroll-up');
+
+    if(this.scrollY >= 500) scrollHome.classList.add('show__scroll');
+    else scrollHome.classList.remove('show__scroll');
+}
+window.addEventListener('scroll', scrollBackHome)
+
+// Scroll Setion active link
+
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive(){
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50;
+        sectionId = current.getAttribute('id')
+
+        if(scrollY> sectionTop && scrollY<= sectionTop + sectionHeight){
+            document.querySelector('.nav__menu a[href*='+ sectionId +']').classList.add('active__link');
+        }
+        else{
+            document.querySelector('.nav__menu a[href*='+ sectionId +']').classList.remove('active__link');
+
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive)
+
+// const sections = document.querySelectorAll('section[id]');
+// const navLinks = document.querySelectorAll('.nav__menu a');
+
+// function scrollActive() {
+//     const scrollY = window.pageYOffset;
+
+//     sections.forEach(current => {
+//         const sectionHeight = current.offsetHeight;
+//         const sectionTop = current.offsetTop - 50;
+//         const sectionId = current.getAttribute('id');
+//         const navLink = document.querySelector('.nav__menu a[href*=' + sectionId + ']');
+
+//         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+//             navLink.classList.add('active__link');
+//         } else {
+//             navLink.classList.remove('active__link');
+//         }
+//     });
+// }
+
+// window.addEventListener('scroll', scrollActive);
