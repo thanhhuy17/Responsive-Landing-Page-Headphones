@@ -67,24 +67,27 @@ function scrollActive(){
 }
 window.addEventListener('scroll', scrollActive)
 
-// const sections = document.querySelectorAll('section[id]');
-// const navLinks = document.querySelectorAll('.nav__menu a');
+// Reveral Scroll Animation
+const sr = ScrollReveal({
+    distance: '60px',
+    duaration: 2500,
+    delay: 400,
+    // reset: true 
+})
 
-// function scrollActive() {
-//     const scrollY = window.pageYOffset;
+sr.reveal(`.home__header, .section__title` , {delay: 600})
+sr.reveal(`.home__footer` , {delay: 700})
+sr.reveal(`.home__img` , {delay: 1000, origin: 'top'})
 
-//     sections.forEach(current => {
-//         const sectionHeight = current.offsetHeight;
-//         const sectionTop = current.offsetTop - 50;
-//         const sectionId = current.getAttribute('id');
-//         const navLink = document.querySelector('.nav__menu a[href*=' + sectionId + ']');
+sr.reveal(`.sponsor__img, .products__card, .footer__logo` , {delay: 500, origin: 'top', interval: 100})
+sr.reveal(`.specs__data, .discount__animate, .footer__content, .footer__copy` , { origin: 'left', interval: 100})
+sr.reveal(`.specs__img, .discount__img` , { origin: 'right'})
 
-//         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-//             navLink.classList.add('active__link');
-//         } else {
-//             navLink.classList.remove('active__link');
-//         }
-//     });
-// }
+sr.reveal(`.case__img` , { origin: 'top'})
+sr.reveal(`.case__data` , { origin: 'bottom'})
 
-// window.addEventListener('scroll', scrollActive);
+
+
+
+
+
