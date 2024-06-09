@@ -80,11 +80,11 @@ sr.reveal(`.home__footer` , {delay: 700})
 sr.reveal(`.home__img` , {delay: 1000, origin: 'top'})
 
 sr.reveal(`.sponsor__img, .products__card, .footer__logo` , {delay: 500, origin: 'top', interval: 100})
-sr.reveal(`.specs__data, .discount__animate, .footer__content, .footer__copy` , { origin: 'left', interval: 100})
+sr.reveal(`.specs__data, .discount__animate, .footer__content` , { origin: 'left', interval: 100})
 sr.reveal(`.specs__img, .discount__img` , { origin: 'right'})
 
 sr.reveal(`.case__img` , { origin: 'top'})
-sr.reveal(`.case__data` , { origin: 'bottom'})
+sr.reveal(`.case__data , .footer__copy` , { origin: 'bottom'})
 
 
 
